@@ -1,3 +1,19 @@
+'''
+Created by LynxDigital
+Please give credits for the code if used ^.^ 
+Feel free to reach out for collabs/assistance!
+
+YouTube: https://www.youtube.com/channel/UCJ7GIy9ArKLwxcLqw0j4e6w
+Telegram: t.me/nikileeyyxx
+
+Episode 5 - Exploring Blur Filters
+(1) Homogenous Blur
+(2) Gaussian Blur
+(3) Median Blur
+(4) Bilaterial Filter
+______________________________
+'''
+
 import cv2
 
 #capture = cv2.VideoCapture(0)
