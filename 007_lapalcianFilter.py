@@ -1,6 +1,13 @@
 '''
-References:
-Laplacian of Gaussian (LoG) - https://theailearner.com/tag/cv2-laplacian/
+Created by LynxDigital
+Please give credits for the code if used ^.^ 
+Feel free to reach out for collabs/assistance!
+YouTube: https://www.youtube.com/channel/UCJ7GIy9ArKLwxcLqw0j4e6w
+Telegram: t.me/nikileeyyxx
+Episode 4 - Introduction to Blurring Filters
+(1) Homogenous Blur
+(2) Varying of Kernel Size
+______________________________
 '''
 
 import cv2
@@ -40,3 +47,10 @@ while True:
     
 capture.release()
 cv2.destroyAllWindows()
+
+
+'''
+References:
+Laplacian of Gaussian (LoG) - https://theailearner.com/tag/cv2-laplacian/
+'''
+
