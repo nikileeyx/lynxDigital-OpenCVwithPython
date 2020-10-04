@@ -4,9 +4,9 @@ Please give credits for the code if used ^.^
 Feel free to reach out for collabs/assistance!
 YouTube: https://www.youtube.com/channel/UCJ7GIy9ArKLwxcLqw0j4e6w
 Telegram: t.me/nikileeyyxx
-Episode 4 - Introduction to Blurring Filters
-(1) Homogenous Blur
-(2) Varying of Kernel Size
+Episode 7 - Laplacian Filter
+(1) LoG (Laplacian of Gaussian)
+(2) Kernel Sizing
 ______________________________
 '''
 
