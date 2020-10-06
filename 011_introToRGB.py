@@ -1,4 +1,4 @@
-
+# https://www.geeksforgeeks.org/detect-the-rgb-color-from-a-webcam-using-python-opencv/
 # importing required libraries 
 import cv2 
 import numpy as np 
