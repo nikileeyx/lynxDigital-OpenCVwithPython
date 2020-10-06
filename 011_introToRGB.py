@@ -1,31 +1,35 @@
 
-import cv2
-import numpy as np
-
-cap = cv2.VideoCapture(0)
-
-while True:
-
-    isSuccessful, frame = cap.read()
-
-    # Convert BGR to HSV
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-    # define range of yellow color in HSV
-    lower_yellow = np.array([204,204,0])
-    upper_yellow = np.array([255,255,254])
-
-    # Threshold the HSV image to get only yellow colors
-    mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
-
-    # Bitwise-AND mask and original image
-    res = cv2.bitwise_and(frame,frame, mask= mask)
-
-    cv2.imshow('frame',frame)
-    cv2.imshow('mask',mask)
-    cv2.imshow('res',res)
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
-        break
-
-cv2.destroyAllWindows()
+# importing required libraries 
+import cv2 
+import numpy as np 
+  
+# taking the input from webcam 
+vid = cv2.VideoCapture(0) 
+  
+# running while loop just to make sure that 
+# our program keep running untill we stop it 
+while True: 
+  
+    # capturing the current frame 
+    _, frame = vid.read() 
+  
+    # displaying the current frame 
+    cv2.imshow("frame", frame)  
+  
+    # setting values for base colors 
+    b = frame[:, :, :1] 
+    g = frame[:, :, 1:2] 
+    r = frame[:, :, 2:] 
+  
+    # computing the mean 
+    b_mean = np.mean(b) 
+    g_mean = np.mean(g) 
+    r_mean = np.mean(r) 
+  
+    # displaying the most prominent color 
+    if (b_mean > g_mean and b_mean > r_mean): 
+        print("Blue") 
+    if (g_mean > r_mean and g_mean > b_mean): 
+        print("Green") 
+    else: 
+        print("Red")
