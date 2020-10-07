@@ -54,7 +54,9 @@ References:
 https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html
 https://gist.github.com/pknowledge/62ad0d100d6d4df756c0374dee501131
 https://numpy.org/doc/stable/reference/generated/numpy.copy.html
+
 https://docs.opencv.org/master/d9/db0/tutorial_hough_lines.html
+https://docs.opencv.org/master/d3/de6/tutorial_js_houghlines.html
 
 https://gist.github.com/pknowledge/86a148c6cd5f0f2820ba81561cc00a8e
 '''
