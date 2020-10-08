@@ -1,35 +1,48 @@
-# https://www.geeksforgeeks.org/detect-the-rgb-color-from-a-webcam-using-python-opencv/
-# importing required libraries 
-import cv2 
-import numpy as np 
+import numpy as np
+import cv2
+
+capture = cv2.VideoCapture(0)
   
-# taking the input from webcam 
-vid = cv2.VideoCapture(0) 
-  
-# running while loop just to make sure that 
-# our program keep running untill we stop it 
 while True: 
   
-    # capturing the current frame 
-    _, frame = vid.read() 
+    isSuccesful, frame = capture.read() 
   
-    # displaying the current frame 
-    cv2.imshow("frame", frame)  
-  
-    # setting values for base colors 
-    b = frame[:, :, :1] 
-    g = frame[:, :, 1:2] 
-    r = frame[:, :, 2:] 
-  
-    # computing the mean 
-    b_mean = np.mean(b) 
-    g_mean = np.mean(g) 
-    r_mean = np.mean(r) 
-  
-    # displaying the most prominent color 
-    if (b_mean > g_mean and b_mean > r_mean): 
-        print("Blue") 
-    if (g_mean > r_mean and g_mean > b_mean): 
-        print("Green") 
-    else: 
-        print("Red")
+    if isSuccesful:
+
+        blue = frame[ : , : , :1]
+        green = frame[ : , : , 1:2]
+        red = frame[ : , : , 2:]
+        #print(red[2])
+
+        blueMean = np.mean(blue)
+        greenMean = np.mean(green)
+        redMean = np.mean(red)
+
+        if (blueMean > greenMean and blueMean > redMean):
+            print("This frame is predominantly blue!")
+
+        elif (greenMean > blueMean and greenMean > redMean):
+            print("This frame is predominantly green!")
+
+        elif (redMean > blueMean and redMean > greenMean):
+            print("This frame is predominantly red!")
+            
+        elif (greenMean and blueMean and redMean < 30):
+            print("This frame is predominantly dark!")
+
+    else:
+        break
+    
+    cv2.imshow("Frame", frame)
+    
+    if cv2.waitKey(60) == ord('q'):
+        break
+    
+capture.release()
+cv2.destroyAllWindows()
+
+'''
+References
+https://www.geeksforgeeks.org/detect-the-rgb-color-from-a-webcam-using-python-opencv/
+importing required libraries 
+'''
