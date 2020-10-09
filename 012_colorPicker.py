@@ -1,32 +1,37 @@
 
-
-import cv2
 import numpy as np
+import cv2
 
-cap = cv2.VideoCapture(0)
+def printIt(x):
+    pass
+
+capture = cv2.VideoCapture(0)
+
+cv2.namedWindow("Trackbar")
+
+cv2.createTrackbar("Blue", "Trackbar", 0 , 255 , printIt)
+cv2.createTrackbar("Green", "Trackbar", 0 , 255 , printIt)
+cv2.createTrackbar("Red", "Trackbar", 0 , 255 , printIt)
+
 
 while True:
+  
+    isSuccesful, frame = capture.read() 
+  
+    if isSuccesful:
 
-    isSuccessful, frame = cap.read()
+        blue = cv2.getTrackbarPos("Blue", "Trackbar")
+        green = cv2.getTrackbarPos("Green", "Trackbar")
+        red = cv2.getTrackbarPos("Red", "Trackbar")
 
-    # Convert BGR to HSV
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-    # define range of yellow color in HSV
-    lower_yellow = np.array([204,204,0])
-    upper_yellow = np.array([255,255,254])
-
-    # Threshold the HSV image to get only yellow colors
-    mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
-
-    # Bitwise-AND mask and original image
-    res = cv2.bitwise_and(frame,frame, mask= mask)
-
-    cv2.imshow('frame',frame)
-    cv2.imshow('mask',mask)
-    cv2.imshow('res',res)
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
+        frame[:] = [blue, green, red]
+        cv2.imshow("Frame", frame)
+        
+    else:
         break
-
+        
+    if cv2.waitKey(60) == ord('q'):
+        break
+    
+capture.release()
 cv2.destroyAllWindows()
