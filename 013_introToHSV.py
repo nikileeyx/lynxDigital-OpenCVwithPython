@@ -36,3 +36,6 @@ while True:
         break
 
 cv2.destroyAllWindows()
+
+    isSuccessful, frame = cap.read()
+    isSuccessful, frame = cap.read()
