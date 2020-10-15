@@ -8,6 +8,7 @@ ______________________________
 '''
 
 import cv2
+import numpy as np
 
 capture = cv2.VideoCapture(0)
 #capture = cv2.VideoCapture("Road Clips/001.mp4")
