@@ -41,5 +41,6 @@ while True:
     if cv2.waitKey(60) == ord('q'):
         break
     
+#Default code
 capture.release()
 cv2.destroyAllWindows()
