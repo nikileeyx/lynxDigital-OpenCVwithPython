@@ -1,3 +1,8 @@
+'''
+LynxDigital YouTube Channel:
+This code alone will not execute any file, this is a file with functions that will be used by the main program.
+'''
+
 import cv2
 import numpy as np
 
