@@ -9,8 +9,10 @@ ______________________________
 import numpy as np
 import cv2
 
+
 capture = cv2.VideoCapture("Road Clips/003 (NUS YIH).mp4")
 #insert the path to your own video here! 
+#capture = cv2.VideoCapture(0) #uncomment this line for your device's camera
 
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,5))
 foreBack = cv2.bgsegm.createBackgroundSubtractorMOG()
