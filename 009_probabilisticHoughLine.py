@@ -9,6 +9,7 @@ ______________________________
 import cv2
 import numpy as np
 
+#capture = cv2.VideoCapture(0) # this activates your device's camera
 capture = cv2.VideoCapture("Road Clips/003 (NUS YIH).mp4")
 
 while True:
