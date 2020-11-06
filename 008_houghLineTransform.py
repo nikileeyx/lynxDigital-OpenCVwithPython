@@ -1,5 +1,6 @@
 '''
 LYNXdigital
+Telegram: t.me/nikileeyyxx
 '''
 
 import cv2
