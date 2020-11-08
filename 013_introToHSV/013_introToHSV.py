@@ -1,4 +1,6 @@
 '''
+
+LYNXDigital OpenCV Series
 It ranges from 0 to 255, with 0 being completely dark and 255 being fully bright. 
 White has an HSV value of 0-255, 0-255, 255. 
 Black has an HSV value of 0-255, 0-255, 0. 
