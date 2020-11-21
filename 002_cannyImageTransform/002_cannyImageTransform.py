@@ -1,5 +1,6 @@
 '''
-Created by LynxDigital
+
+Created by lynxDigital
 Please give credits for the code if used ^.^
 
 YouTube: https://www.youtube.com/channel/UCJ7GIy9ArKLwxcLqw0j4e6w
