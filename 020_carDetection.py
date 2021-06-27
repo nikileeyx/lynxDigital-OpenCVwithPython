@@ -10,7 +10,6 @@ capture = cv2.VideoCapture(0)
 faceReg = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 eyeReg = cv2.CascadeClassifier("haarcascade_eye.xml")
 
-
 counter = 10
 while True:
 
