@@ -32,6 +32,7 @@ while True:
             frame = cv2.rectangle(frame, (x1,y1), (x1+w1, y1+h1), (255,0, 255), 2)
             cv2.putText(frame, "This is a face", (x1 + 5, y1 + 5), cv2.FONT_HERSHEY_DUPLEX, 0.5, (240,40,255), 1)
                     
+                
             for (x2,y2,w2,h2) in eye:
                 frame = cv2.rectangle(frame, (x2,y2), (x2+w2, y2+h2), (255,0, 255), 2)
                 cv2.putText(frame, "Eye", (x2 + 5, y2 + 5), cv2.FONT_HERSHEY_DUPLEX, 0.5, (240,40,255), 1)
