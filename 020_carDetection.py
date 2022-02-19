@@ -7,7 +7,6 @@ Telegram: t.me/nikileeyyxx
 ______________________________
 '''
 
-
 import cv2
 import numpy as np
 import scaleFunction
