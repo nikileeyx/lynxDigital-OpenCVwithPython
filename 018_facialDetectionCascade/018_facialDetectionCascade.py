@@ -10,6 +10,7 @@ eyeReg = cv2.CascadeClassifier("haarcascade_eye.xml")
 
 counter = 10
 while True:
+    
 
     isSuccessful, frame = capture.read()
 
