@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import scaleFunction
+
 capture = cv2.VideoCapture(0)
 #capture = cv2.VideoCapture('303 (straightRoad).mp4')
 
